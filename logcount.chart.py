@@ -12,25 +12,18 @@ priority = 90000
 update_every = 120
 
 ORDER = [
-    'abnormal',
-    'info'
+    'messages'
 ]
 
 CHARTS = {
-    'abnormal': {
-        'options': [None, 'Messages', 'messages', 'abnormal', 'logcount.abnormal', 'stacked'],
-        'lines': [
-            ['error', None, 'absolute'],
-            ['warning', None, 'absolute']
-        ]
-    },
-    'info': {
-        'options': [None, 'Messages', 'messages', 'info', 'logcount.info', 'stacked'],
+    'messages': {
+        'options': [None, 'Messages by level', 'messages', 'messages', 'logcount.messages', 'stacked'],
         'lines': [
             ['info', None, 'absolute']
+            ['error', None, 'absolute'],
+            ['warning', None, 'absolute'],
         ]
     }
-            
 }
 
 RE_error = re.compile(r'error,.*')
