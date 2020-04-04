@@ -21,13 +21,13 @@ CHARTS = {
         'options': [None, 'Messages', 'messages', 'abnormal', 'logcount.abnormal', 'stacked'],
         'lines': [
             ['error', None, 'absolute'],
-            ['warning', None, 'absolute'],
+            ['warning', None, 'absolute']
         ]
     },
     'info:' {
         'options': [None, 'Messages', 'messages', 'info', 'logcount.info', 'stacked'],
         'lines': [
-            ['info', None, 'absolute'],
+            ['info', None, 'absolute']
         ]
     }
             
