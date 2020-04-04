@@ -24,7 +24,7 @@ CHARTS = {
             ['warning', None, 'absolute']
         ]
     },
-    'info:' {
+    'info': {
         'options': [None, 'Messages', 'messages', 'info', 'logcount.info', 'stacked'],
         'lines': [
             ['info', None, 'absolute']
