@@ -1,1 +1,1 @@
-0/5 * * * * root lnav -n -f /opt/netdata-logcount/logcount.sql > /var/run/logcount 2>&1
+*/5 * * * * root lnav -n -f /opt/netdata-logcount/logcount.sql > /var/run/logcount 2>&1
