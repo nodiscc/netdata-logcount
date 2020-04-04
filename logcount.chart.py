@@ -19,9 +19,9 @@ CHARTS = {
     'messages': {
         'options': [None, 'Messages by level', 'messages', 'messages', 'logcount.messages', 'stacked'],
         'lines': [
-            ['info', None, 'absolute']
+            ['info', None, 'absolute'],
             ['error', None, 'absolute'],
-            ['warning', None, 'absolute'],
+            ['warning', None, 'absolute']
         ]
     }
 }
