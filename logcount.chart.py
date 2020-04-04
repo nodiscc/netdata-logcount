@@ -79,6 +79,7 @@ class Service(SimpleService):
         lines = file.read()
         self.debug("LINES: {}".format(lines))
         self.data['error'] = re.findall(RE_error, lines)[0].split(',')[1]
+        self.debug("ERROR MESSAGES: {}".format(self.data['warning']))
         self.data['warning'] = re.findall(RE_warning, lines)[0].split(',')[1]
         self.debug("WARNING MESSAGES: {}".format(self.data['warning']))
         self.data['info'] = re.findall(RE_info, lines)[0].split(',')[1]
