@@ -29,9 +29,9 @@ nano netdata-logcount/logcount.sql
 sudo mkdir /opt/netdata-logcount
 sudo cp netdata-logcount/opt_netdata-logcount_logcount.sql /opt/netdata-logcount/logcount.sql
 sudo cp netdata-logcount/cron.d_logcount /etc/cron.d/logcount
-sudo cp netdata-logcount/logcount.chart.py /opt/netdata/python.d/
-sudo cp netdata-logcount/logcount.conf /opt/netdata/python.d/
-sudo cp netdata-logcount/health.d_logcount.conf /opt/netdata/etc/health.d/logcount.conf
+sudo cp netdata-logcount/logcount.chart.py /opt/netdata/usr/libexec/netdata/python.d/
+sudo cp netdata-logcount/python.d_logcount.conf /opt/netdata/etc/netdata/python.d/
+sudo cp netdata-logcount/health.d_logcount.conf /opt/netdata/etc/netdata/health.d/logcount.conf
 
 # generate the initial lgocount file
 sudo lnav -n -f /opt/netdata-logcount/logcount.sql > /var/log/logcount.log
