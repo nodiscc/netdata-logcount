@@ -11,7 +11,7 @@ Maximum acceptable number of error/warning/info log messages over the configured
 
 ## Installation
 
-This plugin expects the CSV output of this [lnav script](opt_netdata-logcount_logcount.sql) at `/var/log/logcount.log`
+This plugin expects the CSV output of this [lnav script](logcount.sql) at `/var/log/logcount.log`
 
 ```bash
 # install lnav
@@ -43,7 +43,7 @@ systemctl restart netdata
 
 ## Configuration
 
-No configuration is required. Common `python.d` plugin options can be changed in [`logcount.conf`](logcount.conf).
+No configuration is required. Common `python.d` plugin options can be changed in [`python.d_logcount.conf`](python.d_logcount.conf). Alarm settings can be changed in [`health.d_logcount.conf`](health.d_logcount.conf)
 
 You can browse logs by running `sudo lnav` form a terminal and reading the [documentation](https://lnav.readthedocs.io/en/latest/)
 
