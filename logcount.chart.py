@@ -6,7 +6,7 @@
 import os
 import re
 
-from bases.Frameworkinfo.SimpleService import SimpleService
+from bases.FrameworkServices.SimpleService import SimpleService
 
 priority = 90000
 update_every = 120
