@@ -60,8 +60,6 @@ class Service(SimpleService):
             self.data['warning'] = 0
             self.data['info'] = 0
             return self.data
-        else:
-            self.data['error'] = 0
 
         try:
             if not self.is_changed():
