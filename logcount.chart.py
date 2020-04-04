@@ -33,9 +33,9 @@ CHARTS = {
             
 }
 
-RE_error = re.compile(r'^error,.*')
-RE_warning = re.compile(r'^warning,.*')
-RE_info = re.compile(r'^info,.*')
+RE_error = re.compile(r'error,.*')
+RE_warning = re.compile(r'warning,.*')
+RE_info = re.compile(r'info,.*')
 
 class Service(SimpleService):
     def __init__(self, configuration=None, name=None):
@@ -77,9 +77,12 @@ class Service(SimpleService):
 
         self.modtime = os.path.getmtime(self.path)
         lines = file.read()
-        self.data['error'] = re.findall(RE_error, lines).split(',')[1]
-        self.data['warning'] = re.findall(RE_warning, lines).split(',')[1]
-        self.data['info'] = re.findall(RE_info, lines).split(',')[1]
+        self.debug("LINES: {}".format(lines))
+        self.data['error'] = re.findall(RE_error, lines)[0].split(',')[1]
+        self.data['warning'] = re.findall(RE_warning, lines)[0].split(',')[1]
+        self.debug("WARNING MESSAGES: {}".format(self.data['warning']))
+        self.data['info'] = re.findall(RE_info, lines)[0].split(',')[1]
+        self.debug("INFO MESSAGES: {}".format(self.data['info']))
         return self.data
 
     def is_changed(self):
@@ -90,4 +93,3 @@ def is_readable(path):
 
 def is_empty(path):
     return os.path.getsize(path) == 0
-
