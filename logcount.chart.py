@@ -23,7 +23,7 @@ CHARTS = {
             ['error', None, 'absolute'],
             ['warning', None, 'absolute'],
         ]
-    }
+    },
     'info:' {
         'options': [None, 'Messages', 'messages', 'info', 'logcount.info', 'stacked'],
         'lines': [
