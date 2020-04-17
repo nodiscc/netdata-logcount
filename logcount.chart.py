@@ -69,12 +69,25 @@ class Service(SimpleService):
         self.modtime = os.path.getmtime(self.path)
         lines = file.read()
         self.debug("LINES: {}".format(lines))
-        self.data['error'] = re.findall(RE_error, lines)[0].split(',')[1]
+
+        try:
+            self.data['error'] = re.findall(RE_error, lines)[0].split(',')[1]
+        except IndexError as e:
+            self.data['error'] = 0
         self.debug("ERROR MESSAGES: {}".format(self.data['error']))
-        self.data['warning'] = re.findall(RE_warning, lines)[0].split(',')[1]
+
+        try:
+            self.data['warning'] = re.findall(RE_warning, lines)[0].split(',')[1]
+        except IndexError as e:
+            self.data['warning'] = 0
         self.debug("WARNING MESSAGES: {}".format(self.data['warning']))
-        self.data['info'] = re.findall(RE_info, lines)[0].split(',')[1]
+
+        try:
+            self.data['info'] = re.findall(RE_info, lines)[0].split(',')[1]
+        except IndexError as e:
+            self.data['info'] = 0
         self.debug("INFO MESSAGES: {}".format(self.data['info']))
+
         return self.data
 
     def is_changed(self):
