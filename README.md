@@ -43,9 +43,11 @@ systemctl restart netdata
 
 ## Configuration
 
-No configuration is required. Common `python.d` plugin options can be changed in [`python.d_logcount.conf`](python.d_logcount.conf). Alarm settings can be changed in [`health.d_logcount.conf`](health.d_logcount.conf)
+- Change log parsing interval in `/etc/cron.d/logcount /opt/netdata-logcount/logcount.sql`
+- Chart refresh time/common `python.d` plugin options can be changed in [`/opt/netdata/etc/netdata/health.d/logcount.conf`](python.d_logcount.conf)
+- Alarm settings can be changed in [`health.d_logcount.conf`](health.d_logcount.conf)
 
-You can browse logs by running `sudo lnav` form a terminal and reading the [documentation](https://lnav.readthedocs.io/en/latest/)
+Browse logs by running `sudo lnav` from a terminal, and read the [documentation](https://lnav.readthedocs.io/en/latest/)
 
 
 ## Debug
