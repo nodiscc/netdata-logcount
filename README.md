@@ -11,7 +11,7 @@ Maximum acceptable number of error/warning/info log messages over the configured
 
 ## Installation
 
-This plugin expects the CSV output of this [lnav script](logcount.sql) at `/var/log/logcount.log`
+This plugin expects the CSV output of a [lnav](https://lnav.org/) [script](logcount.sql) at `/var/run/logcount`
 
 ```bash
 # install lnav
@@ -30,7 +30,7 @@ sudo mkdir /opt/netdata-logcount
 sudo cp netdata-logcount/opt_netdata-logcount_logcount.sql /opt/netdata-logcount/logcount.sql
 sudo cp netdata-logcount/cron.d_logcount /etc/cron.d/logcount
 sudo cp netdata-logcount/logcount.chart.py /opt/netdata/usr/libexec/netdata/python.d/
-sudo cp netdata-logcount/python.d_logcount.conf /opt/netdata/etc/netdata/python.d/
+sudo cp netdata-logcount/python.d_logcount.conf /opt/netdata/etc/netdata/python.d/logcount.conf
 sudo cp netdata-logcount/health.d_logcount.conf /opt/netdata/etc/netdata/health.d/logcount.conf
 
 # generate the initial lgocount file
@@ -44,8 +44,8 @@ systemctl restart netdata
 ## Configuration
 
 - Change log parsing interval in `/etc/cron.d/logcount /opt/netdata-logcount/logcount.sql`
-- Chart refresh time/common `python.d` plugin options can be changed in [`/opt/netdata/etc/netdata/health.d/logcount.conf`](python.d_logcount.conf)
-- Alarm settings can be changed in [`health.d_logcount.conf`](health.d_logcount.conf)
+- Chart refresh time/common `python.d` plugin options can be changed in [`/opt/netdata/etc/netdata/python.d/logcount.conf`](python.d_logcount.conf)
+- Alarm settings can be changed in [`/opt/netdata/etc/netdata/health.d/logcount.conf`](health.d_logcount.conf)
 
 Browse logs by running `sudo lnav` from a terminal, and read the [documentation](https://lnav.readthedocs.io/en/latest/)
 
@@ -59,6 +59,7 @@ $ sudo su -s /bin/bash netdata
 $ /opt/netdata/usr/libexec/netdata/plugins.d/python.d.plugin 1  debug trace logcount
 ```
 
+Due to the way the plugins works (parse lnav output generated each X minutes, for messages over last X minutes), message counts shown in the graph represent counts over **the previous period**.
 
 ## License
 
