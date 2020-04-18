@@ -7,7 +7,7 @@
 ;WITH level_counts AS
     (SELECT log_level, count(*) AS total
        FROM all_logs
-       WHERE log_time >= timeslice(datetime(CURRENT_TIMESTAMP, 'localtime'), '5min')
+       WHERE log_time >= datetime(datetime(CURRENT_TIMESTAMP, 'localtime'), '-1 minute')
        GROUP BY log_level)
    SELECT 'total' AS log_level, sum(total) AS total FROM level_counts
    UNION
