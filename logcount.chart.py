@@ -9,7 +9,7 @@ import re
 from bases.FrameworkServices.SimpleService import SimpleService
 
 priority = 90000
-update_every = 120
+update_every = 10
 
 ORDER = [
     'messages'

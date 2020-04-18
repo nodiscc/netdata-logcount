@@ -12,5 +12,5 @@
    SELECT 'total' AS log_level, sum(total) AS total FROM level_counts
    UNION
    SELECT * FROM level_counts
-:write-csv-to -
+:write-csv-to /var/run/logcount
 
