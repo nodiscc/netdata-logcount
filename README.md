@@ -34,7 +34,9 @@ sudo cp netdata-logcount/python.d_logcount.conf /opt/netdata/etc/netdata/python.
 sudo cp netdata-logcount/health.d_logcount.conf /opt/netdata/etc/netdata/health.d/logcount.conf
 
 # generate the initial lgocount file
-sudo lnav -n -f /opt/netdata-logcount/logcount.sql > /var/log/logcount.log
+sudo lnav -n -f /opt/netdata-logcount/logcount.sql > /var/run/logcount
+sudo chgrp netdata /var/run/logcount
+sudo chmod g+r /var/run/logcount
 
 # restart netdata
 systemctl restart netdata
