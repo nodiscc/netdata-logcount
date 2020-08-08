@@ -2,7 +2,7 @@
 
 Check/graph the number of syslog messages, by level over time.
 
-![](https://i.imgur.com/iAF1t5o.png)
+![](https://i.imgur.com/FQqBT7o.png)
 
 This is a `python.d` plugin for [netdata](https://my-netdata.io/). It parses output from [lnav](https://lnav.org/).
 
