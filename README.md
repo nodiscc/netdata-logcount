@@ -29,7 +29,7 @@ nano netdata-logcount/logcount.sql
 sudo mkdir /opt/netdata-logcount
 netdata_install_prefix="/opt/netdata" # if netdata is installed from binary/.run script
 netdata_install_prefix="" # if netdata is installed from OS packages
-sudo cp netdata-logcount/opt_netdata-logcount_logcount.sql /opt/netdata-logcount/logcount.sql
+sudo cp netdata-logcount/logcount.sql /opt/netdata-logcount/logcount.sql
 sudo cp netdata-logcount/cron.d_logcount /etc/cron.d/logcount
 sudo cp netdata-logcount/logcount.chart.py $netdata_install_prefix/usr/libexec/netdata/python.d/
 sudo cp netdata-logcount/python.d_logcount.conf $netdata_install_prefix/etc/netdata/python.d/logcount.conf
