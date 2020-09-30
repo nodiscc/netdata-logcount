@@ -11,7 +11,7 @@ Maximum acceptable number of error/warning/info log messages over the configured
 
 ## Installation
 
-This plugin expects the CSV output of a [lnav](https://lnav.org/) [script](logcount.sql) at `/var/run/logcount`
+This plugin expects the CSV output of a [lnav](https://lnav.org/) [script](logcount.sql) at `/var/cache/logcount`
 
 ```bash
 # install lnav
@@ -36,9 +36,9 @@ sudo cp netdata-logcount/python.d_logcount.conf $netdata_install_prefix/etc/netd
 sudo cp netdata-logcount/health.d_logcount.conf $netdata_install_prefix/etc/netdata/health.d/logcount.conf
 
 # generate the initial lgocount file
-sudo lnav -n -f /opt/netdata-logcount/logcount.sql > /var/run/logcount
-sudo chgrp netdata /var/run/logcount
-sudo chmod g+r /var/run/logcount
+sudo lnav -n -f /opt/netdata-logcount/logcount.sql > /var/cache/logcount
+sudo chgrp netdata /var/cache/logcount
+sudo chmod g+r /var/cache/logcount
 
 # restart netdata
 systemctl restart netdata

@@ -37,7 +37,7 @@ class Service(SimpleService):
         self.definitions = CHARTS
 
         self.data = dict()
-        self.path = '/var/run/logcount'
+        self.path = '/var/cache/logcount'
         self.modtime = ''
         self.data['error'] = 0
         self.data['warning'] = 0
