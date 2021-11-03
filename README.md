@@ -45,6 +45,9 @@ systemctl restart netdata
 
 ```
 
+You can also install this module using the [`nodiscc.xsrv.monitoring` ansible role](https://gitlab.com/nodiscc/xsrv/-/tree/master/roles/monitoring).
+
+
 ## Configuration
 
 - Change log parsing interval in `/etc/cron.d/logcount /opt/netdata-logcount/logcount.sql`
