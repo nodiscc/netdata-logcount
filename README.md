@@ -52,7 +52,7 @@ You can also install this module using the [`nodiscc.xsrv.monitoring` ansible ro
 
 - Change log parsing interval in `/etc/cron.d/logcount /opt/netdata-logcount/logcount.sql`
 - Chart refresh time/common `python.d` plugin options can be changed in [`$netdata_install_prefix/etc/netdata/python.d/logcount.conf`](python.d_logcount.conf)
-- Alarm settings can be changed in [`$netdata_install_prefix/etc/netdata/health.d/logcount.conf`](health.d_logcount.conf)
+- Alarm settings can be changed in [`$netdata_install_prefix/etc/netdata/health.d/logcount.conf`](health.d_logcount.conf) (see [Netdata health alarm configuration](https://learn.netdata.cloud/docs/monitor/configure-alarms)). For example, set `to: silent` to prevent sending mail notifications for an alarm.
 
 Browse logs by running `sudo lnav` from a terminal, and read the [documentation](https://lnav.readthedocs.io/en/latest/)
 
