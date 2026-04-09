@@ -1,5 +1,8 @@
 # netdata-logcount
 
+> [!WARNING]
+> netdata is now proprietary software, this plugin will no longer be maintained. it is recommended to migrate to another monitoring stack based on victoriametrics or prometheus, and grafana for visualization. See https://github.com/nodiscc/toolbox/tree/master/ARCHIVE/ANSIBLE-COLLECTION/roles/netdata for more information. This repository will be archived.
+
 Check/graph the number of syslog messages, by level over time.
 
 ![](https://gitlab.com/nodiscc/toolbox/-/raw/master/DOC/SCREENSHOTS/FQqBT7o.png)
